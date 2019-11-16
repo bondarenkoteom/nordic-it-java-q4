@@ -1,35 +1,35 @@
-**/target/
+target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### Apple files ###
 **/.DS_Store
 
 ### STS ###
-**/.apt_generated
-**/.classpath
-**/.factorypath
-**/.project
-**/.settings
-**/.springBeans
-**/.metadata/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.metadata/
 
 ### IntelliJ IDEA ###
-**/.idea
+.idea
 *.iws
 *.iml
 *.ipr
 
 ### NetBeans ###
-**/nbproject/private/
-**/build/
-**/nbbuild/
-**/dist/
-**/nbdist/
-**/.nb-gradle/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
 ### Build files ###
-**/bin/
-**/out/
+bin/
+out/
 *.class
 *.jar
 *.war
