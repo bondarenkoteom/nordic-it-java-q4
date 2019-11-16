@@ -45,8 +45,8 @@ public class HomeWork3 {
 			if (b == 0) {
 				System.out.println("На ноль делить нельзя");
 			} else {
-			System.out.println("Деление");
-			System.out.println((float) a / b);
+				System.out.println("Деление");
+				System.out.println((float) a / b);
 			}
 			break;
 		}
@@ -54,8 +54,8 @@ public class HomeWork3 {
 			if (b == 0) {
 				System.out.println("На ноль делить нельзя");
 			} else {
-			System.out.println("Остаток от деления");
-			System.out.println(a % b);
+				System.out.println("Остаток от деления");
+				System.out.println(a % b);
 			}
 			break;
 		}
