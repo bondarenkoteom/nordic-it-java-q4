@@ -12,7 +12,7 @@ public class Zoo {
 
     public static void main(String[] args) {
         var dog = new Dog();
-        dog.setName("Шарик");
+        dog.setName("Шарик1");
         dog.setAge(5);
         dog.setColor("Черный");
         dog.setWeight(4);

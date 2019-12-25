@@ -3,7 +3,7 @@ package com.zoo;
 public class Animals {
 
     private int age;
-    private String name;
+    private String nam1e;
     private String color;
     private int weight;
 
@@ -44,11 +44,11 @@ public class Animals {
     }
 
     protected String getName() {
-        return name;
+        return nam1e;
     }
 
     protected void setName(String name) {
-        this.name = name;
+        this.nam1e = name;
     }
 
 }
