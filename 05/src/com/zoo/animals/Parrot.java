@@ -24,7 +24,7 @@ public class Parrot extends Animals {
     }
 
     public void say() {
-        System.out.println("Кеша молоде1ц");
+        System.out.println("Кеша молодец");
     }
 
     public void feel() {

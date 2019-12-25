@@ -24,7 +24,7 @@ public class Lion extends Animals {
     }
 
     public void feel() {
-        System.out.println("Агрессивн1ый");
+        System.out.println("Агрессивный");
     }
 
     public void doing() {

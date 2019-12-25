@@ -24,7 +24,7 @@ public class Horse extends Animals {
     }
 
     public void feel() {
-        System.out.println("Весел1ая");
+        System.out.println("Веселая");
     }
 
     public void doing() {

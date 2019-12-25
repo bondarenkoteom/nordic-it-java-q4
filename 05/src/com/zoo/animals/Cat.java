@@ -24,7 +24,7 @@ public class Cat extends Animals {
     }
 
     public void say() {
-        System.out.println("Мяу1");
+        System.out.println("Мяу");
     }
 
     public void feel() {

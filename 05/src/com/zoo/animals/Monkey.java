@@ -24,7 +24,7 @@ public class Monkey extends Animals {
     }
 
     public void feel() {
-        System.out.println("Спокойн1ый");
+        System.out.println("Спокойный");
     }
 
     public void doing() {

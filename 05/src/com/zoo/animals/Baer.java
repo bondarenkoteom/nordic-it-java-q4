@@ -24,7 +24,7 @@ public class Baer extends Animals {
     }
 
     public void say() {
-        System.out.println("Хочу спат1ь");
+        System.out.println("Хочу спать");
     }
 
     public void feel() {
