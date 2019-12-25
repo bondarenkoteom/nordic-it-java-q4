@@ -2,10 +2,10 @@ package com.zoo;
 
 public class Animals {
 
-    protected int age;
-    protected String name;
-    protected String color;
-    protected int weight;
+    private int age;
+    private String name;
+    private String color;
+    private int weight;
 
     public void doing() {
         System.out.println();
@@ -20,7 +20,7 @@ public class Animals {
     }
 
     public void say() {
-        System.out.println("Я животное");
+        System.out.println();
     }
 
     public void feel() {

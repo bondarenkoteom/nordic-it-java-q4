@@ -4,15 +4,34 @@ import com.zoo.Animals;
 
 public class Dog extends Animals {
 
+    private String want;
+    private String search;
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
+    }
+
+    public String getWant() {
+        return want;
+    }
+
+    public void setWant(String want) {
+        this.want = want;
+    }
+
     public void say() {
-        System.out.println("Гав");
+        System.out.println("Р“Р°РІ");
     }
 
     public void feel() {
-        System.out.println("Голодный");
+        System.out.println("Р“РѕР»РѕРґРЅС‹Р№");
     }
 
     public void doing() {
-        System.out.println("Бегает");
+        System.out.println("Р‘РµРіР°РµС‚");
     }
 }
