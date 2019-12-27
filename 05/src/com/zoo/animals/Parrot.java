@@ -1,26 +1,18 @@
 package com.zoo.animals;
 
-import com.zoo.Animals;
+public class Parrot extends Animal {
 
-public class Parrot extends Animals {
+    public Parrot(int age, String name, String color, int weight) {
+        super(age, name, color, weight);
 
-    private String see;
-    private String regard;
-
-    public String getSee() {
-        return see;
     }
 
-    public void setSee(String see) {
-        this.see = see;
+    public void see() {
+        System.out.println("Смотрит на посетителей");
     }
 
-    public String getRegard() {
-        return regard;
-    }
-
-    public void setRegard(String regard) {
-        this.regard = regard;
+    public void regard() {
+        System.out.println("Считает посетителей");
     }
 
     public void say() {

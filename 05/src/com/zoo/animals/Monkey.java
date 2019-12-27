@@ -1,26 +1,17 @@
 package com.zoo.animals;
 
-import com.zoo.Animals;
+public class Monkey extends Animal {
 
-public class Monkey extends Animals {
-
-    private String tree;
-    private String apple;
-
-    public String getTree() {
-        return tree;
+    public Monkey(int age, String name, String color, int weight) {
+        super(age, name, color, weight);
     }
 
-    public void setTree(String tree) {
-        this.tree = tree;
+    public void tree() {
+        System.out.println("Залез на дерево");
     }
 
-    public String getApple() {
-        return apple;
-    }
-
-    public void setApple(String apple) {
-        this.apple = apple;
+    public void apple() {
+        System.out.println("Достал яблоко");
     }
 
     public void feel() {

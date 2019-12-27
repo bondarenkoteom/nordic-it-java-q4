@@ -1,26 +1,17 @@
 package com.zoo.animals;
 
-import com.zoo.Animals;
+public class Dog extends Animal {
 
-public class Dog extends Animals {
-
-    private String want;
-    private String search;
-
-    public String getSearch() {
-        return search;
+    public Dog(int age, String name, String color, int weight) {
+        super(age, name, color, weight);
     }
 
-    public void setSearch(String search) {
-        this.search = search;
+    public void want() {
+        System.out.println("Хочет есть");
     }
 
-    public String getWant() {
-        return want;
-    }
-
-    public void setWant(String want) {
-        this.want = want;
+    public void search() {
+        System.out.println("В поиске еды");
     }
 
     public void say() {

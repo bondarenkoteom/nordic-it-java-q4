@@ -1,26 +1,17 @@
 package com.zoo.animals;
 
-import com.zoo.Animals;
+public class Lion extends Animal {
 
-public class Lion extends Animals {
-
-    private String fly;
-    private String tail;
-
-    public String getFly() {
-        return fly;
+    public Lion(int age, String name, String color, int weight) {
+        super(age, name, color, weight);
     }
 
-    public void setFly(String fly) {
-        this.fly = fly;
+    public void fly() {
+        System.out.println("Достала муха");
     }
 
-    public String getTail() {
-        return tail;
-    }
-
-    public void setTail(String tail) {
-        this.tail = tail;
+    public void tail() {
+        System.out.println("Машет хвостом");
     }
 
     public void feel() {

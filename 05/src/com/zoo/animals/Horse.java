@@ -1,26 +1,17 @@
 package com.zoo.animals;
 
-import com.zoo.Animals;
+public class Horse extends Animal {
 
-public class Horse extends Animals {
-
-    private String bug;
-    private String col;
-
-    public String getBug() {
-        return bug;
+    public Horse(int age, String name, String color, int weight) {
+        super(age, name, color, weight);
     }
 
-    public void setBug(String bug) {
-        this.bug = bug;
+    public void bug() {
+        System.out.println("Пытается не застрять в текстурах");
     }
 
-    public String getCol() {
-        return col;
-    }
-
-    public void setCol(String col) {
-        this.col = col;
+    public void col() {
+        System.out.println("Ищет седло");
     }
 
     public void feel() {

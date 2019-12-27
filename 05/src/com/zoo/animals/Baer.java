@@ -1,26 +1,17 @@
 package com.zoo.animals;
 
-import com.zoo.Animals;
+public class Baer extends Animal {
 
-public class Baer extends Animals {
-
-    private String act;
-    private String paw;
-
-    public String getAct() {
-        return act;
+    public Baer(int age, String name, String color, int weight) {
+        super(age, name, color, weight);
     }
 
-    public void setAct(String act) {
-        this.act = act;
+    public void act() {
+        System.out.println("Идет в берлогу");
     }
 
-    public String getPaw() {
-        return paw;
-    }
-
-    public void setPaw(String paw) {
-        this.paw = paw;
+    public void paw() {
+        System.out.println("Сосет лапу");
     }
 
     public void say() {

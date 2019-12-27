@@ -1,21 +1,28 @@
-package com.zoo;
+package com.zoo.animals;
 
-public class Animals {
+public class Animal {
 
     private int age;
     private String name;
     private String color;
     private int weight;
 
+    public Animal(int age, String name, String color, int weight) {
+        this.age = age;
+        this.name = name;
+        this.color = color;
+        this.weight = weight;
+    }
+
     public void doing() {
         System.out.println();
     }
 
-    protected int getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    protected void setWeight(int weight) {
+    private void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -27,7 +34,7 @@ public class Animals {
         System.out.println();
     }
 
-    protected String getColor() {
+    public String getColor() {
         return color;
     }
 
@@ -35,19 +42,19 @@ public class Animals {
         this.color = color;
     }
 
-    protected int getAge() {
+    public int getAge() {
         return age;
     }
 
-    protected void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    protected String getName() {
+    public String getName() {
         return name;
     }
 
-    protected void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

@@ -1,26 +1,18 @@
 package com.zoo.animals;
 
-import com.zoo.Animals;
+public class Cat extends Animal {
 
-public class Cat extends Animals {
+    public Cat(int age, String name, String color, int weight) {
+        super(age, name, color, weight);
 
-    private String dirt;
-    private String think;
-
-    public String getDirt() {
-        return dirt;
     }
 
-    public void setDirt(String dirt) {
-        this.dirt = dirt;
+    public void dirt() {
+        System.out.println("Испачкалася");
     }
 
-    public String getThink() {
-        return think;
-    }
-
-    public void setThink(String think) {
-        this.think = think;
+    public void think() {
+        System.out.println("Думает об охоте на мышь");
     }
 
     public void say() {
