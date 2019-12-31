@@ -14,15 +14,20 @@ public class Lion extends Animal {
         System.out.println("Машет хвостом");
     }
 
-    public void feel() {
-        System.out.println("Агрессивный");
-    }
-
+    @Override
     public void doing() {
         System.out.println("Лежит");
     }
 
+    @Override
     public void say() {
         System.out.println("Я царь зверей");
+
+    }
+
+    @Override
+    public void feel() {
+        System.out.println("Агрессивный");
+
     }
 }

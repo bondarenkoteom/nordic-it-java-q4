@@ -14,15 +14,22 @@ public class Dog extends Animal {
         System.out.println("В поиске еды");
     }
 
-    public void say() {
-        System.out.println("Гав");
-    }
-
-    public void feel() {
-        System.out.println("Голодный");
-    }
-
+    @Override
     public void doing() {
         System.out.println("Бегает");
+
     }
+
+    @Override
+    public void say() {
+        System.out.println("Гав");
+
+    }
+
+    @Override
+    public void feel() {
+        System.out.println("Голодный");
+
+    }
+
 }

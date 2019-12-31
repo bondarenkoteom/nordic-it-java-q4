@@ -1,11 +1,15 @@
 package com.zoo.animals;
 
-public class Animal {
+abstract public class Animal implements Doingable, Speaking, Feeling {
 
     private int age;
     private String name;
     private String color;
     private int weight;
+
+    public Animal() {
+
+    }
 
     public Animal(int age, String name, String color, int weight) {
         this.age = age;
@@ -14,9 +18,11 @@ public class Animal {
         this.weight = weight;
     }
 
-    public void doing() {
-        System.out.println();
-    }
+    public abstract void doing();
+
+    public abstract void feel();
+
+    public abstract void say();
 
     public int getWeight() {
         return weight;
@@ -26,19 +32,11 @@ public class Animal {
         this.weight = weight;
     }
 
-    public void say() {
-        System.out.println();
-    }
-
-    public void feel() {
-        System.out.println();
-    }
-
     public String getColor() {
         return color;
     }
 
-    protected void setColor(String color) {
+    private void setColor(String color) {
         this.color = color;
     }
 
@@ -46,7 +44,7 @@ public class Animal {
         return age;
     }
 
-    public void setAge(int age) {
+    private void setAge(int age) {
         this.age = age;
     }
 
@@ -54,8 +52,21 @@ public class Animal {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
+    }
+
+    public void eat(double kgs) {
+        System.out.println("Съем " + kgs + " килограммa еды");
+    }
+
+    public void eat(String title) {
+        System.out.println(title + " лучшая еда!");
+
+    }
+
+    public void eat(int kgs) {
+        System.out.println("Съем " + kgs + " килограммa еды");
     }
 
 }

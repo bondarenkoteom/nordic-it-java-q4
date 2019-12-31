@@ -15,16 +15,21 @@ public class Parrot extends Animal {
         System.out.println("Считает посетителей");
     }
 
-    public void say() {
-        System.out.println("Кеша молодец");
-    }
-
-    public void feel() {
-        System.out.println("Довольный");
-    }
-
+    @Override
     public void doing() {
         System.out.println("Сидит на жердочке");
+
+    }
+
+    @Override
+    public void say() {
+        System.out.println("Кеша молодец");
+
+    }
+
+    @Override
+    public void feel() {
+        System.out.println("Довольный");
     }
 
 }

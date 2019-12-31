@@ -14,15 +14,21 @@ public class Monkey extends Animal {
         System.out.println("Достал яблоко");
     }
 
-    public void feel() {
-        System.out.println("Спокойный");
-    }
-
+    @Override
     public void doing() {
-        System.out.println("Кушает");
+        System.out.println("Скачет");
+
     }
 
+    @Override
     public void say() {
         System.out.println("Где бананы?");
+
+    }
+
+    @Override
+    public void feel() {
+        System.out.println("Спокойный");
+
     }
 }

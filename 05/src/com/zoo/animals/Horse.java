@@ -14,15 +14,21 @@ public class Horse extends Animal {
         System.out.println("Ищет седло");
     }
 
-    public void feel() {
-        System.out.println("Веселая");
-    }
-
+    @Override
     public void doing() {
         System.out.println("Скачет");
+
     }
 
+    @Override
     public void say() {
         System.out.println("Где Геральт?");
+
+    }
+
+    @Override
+    public void feel() {
+        System.out.println("Веселая");
+
     }
 }

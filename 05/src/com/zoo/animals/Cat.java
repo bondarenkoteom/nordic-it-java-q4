@@ -15,16 +15,22 @@ public class Cat extends Animal {
         System.out.println("Думает об охоте на мышь");
     }
 
-    public void say() {
-        System.out.println("Мяу");
-    }
-
-    public void feel() {
-        System.out.println("Грустный");
-    }
-
+    @Override
     public void doing() {
         System.out.println("Умывается");
+
+    }
+
+    @Override
+    public void say() {
+        System.out.println("Мяу");
+
+    }
+
+    @Override
+    public void feel() {
+        System.out.println("Грустный");
+
     }
 
 }

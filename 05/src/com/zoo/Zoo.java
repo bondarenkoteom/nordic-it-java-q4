@@ -12,10 +12,6 @@ public class Zoo {
 
     public static void main(String[] args) {
         var dog = new Dog(5, "Шарик", "Черный", 4);
-//        dog.setName("Шарик");
-//        dog.setAge(5);
-//        dog.setColor("Черный");
-//        dog.setWeight(4);
         System.out.println(dog.getAge());
         System.out.println(dog.getName());
         System.out.println(dog.getColor());
@@ -25,14 +21,12 @@ public class Zoo {
         dog.feel();
         dog.want();
         dog.search();
+        dog.eat(1.5);
+        dog.eat("Чапи");
 
         System.out.println();
 
         var cat = new Cat(6, "Мурзик", "Рыжий", 3);
-//        cat.setName(Мурзик");
-//        cat.setAge(6);
-//        cat.setColor("Рыжий");
-//        cat.setWeight(3);
         System.out.println(cat.getAge());
         System.out.println(cat.getName());
         System.out.println(cat.getColor());
@@ -42,14 +36,12 @@ public class Zoo {
         cat.doing();
         cat.say();
         cat.think();
+        cat.eat(0.5);
+        cat.eat("Вискас");
 
         System.out.println();
 
         var bear = new Baer(15, "Косолапый", "Бурый", 450);
-//        bear.setName("Косолапый");
-//        bear.setAge(15);
-//        bear.setColor("Бурый");
-//        bear.setWeight(450);
         System.out.println(bear.getAge());
         System.out.println(bear.getName());
         System.out.println(bear.getColor());
@@ -59,14 +51,12 @@ public class Zoo {
         bear.doing();
         bear.say();
         bear.paw();
+        bear.eat(15);
+        bear.eat("Мед");
 
         System.out.println();
 
         var parrot = new Parrot(2, "Кеша", "Красный", 1);
-//        parrot.setName("Кеша");
-//        parrot.setAge(2);
-//        parrot.setColor("Красный");
-//        parrot.setWeight(1);
         System.out.println(parrot.getAge());
         System.out.println(parrot.getName());
         System.out.println(parrot.getColor());
@@ -76,14 +66,12 @@ public class Zoo {
         parrot.say();
         parrot.see();
         parrot.regard();
+        parrot.eat(0.1);
+        parrot.eat("Морковь");
 
         System.out.println();
 
         var horse = new Horse(9, "Плотва", "Гнедая", 500);
-//        horse.setName("Плотва");
-//        horse.setAge(9);
-//        horse.setColor("Гнедая");
-//        horse.setWeight(500);
         System.out.println(horse.getAge());
         System.out.println(horse.getName());
         System.out.println(horse.getColor());
@@ -93,14 +81,12 @@ public class Zoo {
         horse.col();
         horse.doing();
         horse.say();
+        horse.eat(5);
+        horse.eat("Овес");
 
         System.out.println();
 
         var monkey = new Monkey(3, "Валера", "Черно-белая", 5);
-//        monkey.setName("Валера");
-//        monkey.setAge(3);
-//        monkey.setColor("Черно-белая");
-//        monkey.setWeight(5);
         System.out.println(monkey.getAge());
         System.out.println(monkey.getName());
         System.out.println(monkey.getColor());
@@ -110,14 +96,12 @@ public class Zoo {
         monkey.apple();
         monkey.doing();
         monkey.say();
+        monkey.eat(0.2);
+        monkey.eat("Бананы");
 
         System.out.println();
 
         var lion = new Lion(10, "Рычун", "Белый", 150);
-//        lion.setName("Рычун");
-//        lion.setAge(10);
-//        lion.setColor("Белый");
-//        lion.setWeight(150);
         System.out.println(lion.getAge());
         System.out.println(lion.getName());
         System.out.println(lion.getColor());
@@ -127,6 +111,8 @@ public class Zoo {
         lion.feel();
         lion.doing();
         lion.say();
+        lion.eat(25.6);
+        lion.eat("Мясо");
 
     }
 
