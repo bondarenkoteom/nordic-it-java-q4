@@ -1,6 +1,6 @@
 package com.zoo.animals;
 
-public interface Doingable {
+public interface Doing {
 
     public void doing();
 

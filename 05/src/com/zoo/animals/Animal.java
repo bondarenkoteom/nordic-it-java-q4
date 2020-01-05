@@ -1,6 +1,8 @@
 package com.zoo.animals;
 
-abstract public class Animal implements Doingable, Speaking, Feeling {
+import com.zoo.exception.NegativeKgsException;
+
+abstract public class Animal implements Doing, Speaking, Feeling {
 
     private int age;
     private String name;
@@ -56,8 +58,11 @@ abstract public class Animal implements Doingable, Speaking, Feeling {
         this.name = name;
     }
 
-    public void eat(double kgs) {
-        System.out.println("Съем " + kgs + " килограммa еды");
+    public void eat(double kgs) throws NegativeKgsException {
+        if (kgs < 0)
+            throw new NegativeKgsException("Не может съесть отрицательное количество еды");
+        else
+            System.out.println("Съем " + kgs + " килограммa еды");
     }
 
     public void eat(String title) {
@@ -65,8 +70,11 @@ abstract public class Animal implements Doingable, Speaking, Feeling {
 
     }
 
-    public void eat(int kgs) {
-        System.out.println("Съем " + kgs + " килограммa еды");
+    public void eat(int kgs) throws NegativeKgsException {
+        if (kgs < 0)
+            throw new NegativeKgsException("Не может съесть отрицательное количество еды");
+        else
+            System.out.println("Съем " + kgs + " килограммa еды");
     }
 
 }

@@ -1,8 +1,8 @@
 package com.zoo.animals;
 
-public class Baer extends Animal {
+public class Bear extends Animal {
 
-    public Baer(int age, String name, String color, int weight) {
+    public Bear(int age, String name, String color, int weight) {
         super(age, name, color, weight);
     }
 

@@ -1,6 +1,8 @@
 package com.zoo.animals;
 
-public class Parrot extends Animal {
+import com.zoo.exception.MoreKmException;
+
+public class Parrot extends Animal implements Flying {
 
     public Parrot(int age, String name, String color, int weight) {
         super(age, name, color, weight);
@@ -30,6 +32,15 @@ public class Parrot extends Animal {
     @Override
     public void feel() {
         System.out.println("Довольный");
+    }
+
+    @Override
+    public void fly(int km) throws MoreKmException {
+        if (km > 5)
+            throw new MoreKmException("Не может пролететь такое количесво киллометров");
+        else
+            System.out.println("Хочу пролететь " + km + " киллометра");
+
     }
 
 }

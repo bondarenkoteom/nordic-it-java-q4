@@ -1,16 +1,18 @@
 package com.zoo;
 
-import com.zoo.animals.Baer;
+import com.zoo.animals.Bear;
 import com.zoo.animals.Cat;
 import com.zoo.animals.Dog;
 import com.zoo.animals.Horse;
 import com.zoo.animals.Lion;
 import com.zoo.animals.Monkey;
 import com.zoo.animals.Parrot;
+import com.zoo.exception.MoreKmException;
+import com.zoo.exception.NegativeKgsException;
 
 public class Zoo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NegativeKgsException, MoreKmException {
         var dog = new Dog(5, "Шарик", "Черный", 4);
         System.out.println(dog.getAge());
         System.out.println(dog.getName());
@@ -21,7 +23,18 @@ public class Zoo {
         dog.feel();
         dog.want();
         dog.search();
-        dog.eat(1.5);
+        try {
+            dog.eat(-1.5);
+        }
+
+        catch (NegativeKgsException me) {
+            System.out.println(me.getMessage());
+        }
+
+        finally {
+            System.out.println("Ввести верное значение");
+        }
+
         dog.eat("Чапи");
 
         System.out.println();
@@ -41,7 +54,7 @@ public class Zoo {
 
         System.out.println();
 
-        var bear = new Baer(15, "Косолапый", "Бурый", 450);
+        var bear = new Bear(15, "Косолапый", "Бурый", 450);
         System.out.println(bear.getAge());
         System.out.println(bear.getName());
         System.out.println(bear.getColor());
@@ -68,6 +81,17 @@ public class Zoo {
         parrot.regard();
         parrot.eat(0.1);
         parrot.eat("Морковь");
+        try {
+            parrot.fly(6);
+        }
+
+        catch (MoreKmException fl) {
+            System.out.println(fl.getMessage());
+        }
+
+        finally {
+            System.out.println("Ввести верное значение");
+        }
 
         System.out.println();
 
@@ -81,7 +105,18 @@ public class Zoo {
         horse.col();
         horse.doing();
         horse.say();
-        horse.eat(5);
+        try {
+            horse.eat(-5);
+        }
+
+        catch (NegativeKgsException mee) {
+            System.out.println(mee.getMessage());
+        }
+
+        finally {
+            System.out.println("Ввести верное значение");
+        }
+
         horse.eat("Овес");
 
         System.out.println();
