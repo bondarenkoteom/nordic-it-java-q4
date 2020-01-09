@@ -2,6 +2,10 @@ package com.zoo.animals;
 
 public class Horse extends Animal {
 
+    public Horse() {
+
+    }
+
     public Horse(int age, String name, String color, int weight) {
         super(age, name, color, weight);
     }
@@ -30,5 +34,21 @@ public class Horse extends Animal {
     public void feel() {
         System.out.println("Веселая");
 
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        return true;
     }
 }

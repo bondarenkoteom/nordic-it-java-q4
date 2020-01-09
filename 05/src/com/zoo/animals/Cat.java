@@ -2,6 +2,10 @@ package com.zoo.animals;
 
 public class Cat extends Animal {
 
+    public Cat() {
+
+    }
+
     public Cat(int age, String name, String color, int weight) {
         super(age, name, color, weight);
 
@@ -31,6 +35,22 @@ public class Cat extends Animal {
     public void feel() {
         System.out.println("Грустный");
 
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        return true;
     }
 
 }

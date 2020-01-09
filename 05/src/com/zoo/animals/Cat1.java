@@ -1,38 +1,39 @@
 package com.zoo.animals;
 
-public class Monkey extends Animal {
+public class Cat1 extends Animal {
 
-    public Monkey() {
+    public Cat1() {
 
     }
 
-    public Monkey(int age, String name, String color, int weight) {
+    public Cat1(int age, String name, String color, int weight) {
         super(age, name, color, weight);
+
     }
 
-    public void tree() {
-        System.out.println("Р—Р°Р»РµР· РЅР° РґРµСЂРµРІРѕ");
+    public void dirt() {
+        System.out.println("Испачкалася");
     }
 
-    public void apple() {
-        System.out.println("Р”РѕСЃС‚Р°Р» СЏР±Р»РѕРєРѕ");
+    public void think() {
+        System.out.println("Думает об охоте на мышь");
     }
 
     @Override
     public void doing() {
-        System.out.println("РЎРєР°С‡РµС‚");
-
-    }
-
-    @Override
-    public void say() {
-        System.out.println("Р“РґРµ Р±Р°РЅР°РЅС‹?");
+        System.out.println("Умывается");
 
     }
 
     @Override
     public void feel() {
-        System.out.println("РЎРїРѕРєРѕР№РЅС‹Р№");
+        System.out.println("Грустный");
+
+    }
+
+    @Override
+    public void say() {
+        System.out.println("Мяу");
 
     }
 
@@ -51,4 +52,5 @@ public class Monkey extends Animal {
             return false;
         return true;
     }
+
 }

@@ -2,8 +2,8 @@ package com.zoo.animals;
 
 import com.zoo.exception.MoreKmException;
 
-public interface Flying {
+interface Flying {
 
-    public void fly(int km) throws MoreKmException;
+    void fly(int km) throws MoreKmException;
 
 }

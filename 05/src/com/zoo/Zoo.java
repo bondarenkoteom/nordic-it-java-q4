@@ -1,5 +1,9 @@
 package com.zoo;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
+import com.zoo.animals.Animal;
 import com.zoo.animals.Bear;
 import com.zoo.animals.Cat;
 import com.zoo.animals.Dog;
@@ -7,12 +11,46 @@ import com.zoo.animals.Horse;
 import com.zoo.animals.Lion;
 import com.zoo.animals.Monkey;
 import com.zoo.animals.Parrot;
+import com.zoo.exception.MoreAnimalException;
 import com.zoo.exception.MoreKmException;
+import com.zoo.exception.MorePlaceException;
 import com.zoo.exception.NegativeKgsException;
+import com.zoo.exception.NegativeTypeException;
 
 public class Zoo {
 
-    public static void main(String[] args) throws NegativeKgsException, MoreKmException {
+    protected static Animal fullAviary(Animal animal, HashSet<Animal> aviary)
+            throws NegativeTypeException, MoreAnimalException {
+        if (aviary.size() > 4) {
+            throw new MoreAnimalException("Вальер полный");
+        } else {
+        }
+
+        if (aviary.add(animal) == false) {
+            throw new NegativeTypeException("Одинаковые животные");
+        }
+        return animal;
+
+    }
+
+    protected static Boolean AddAviary(Animal animals, HashMap<String, HashSet<Animal>> ary, String name)
+            throws MorePlaceException {
+        if (ary.containsKey(name) == false) {
+            throw new MorePlaceException("Не этот вальер");
+        } else {
+            for (var a : ary.entrySet()) {
+                if (a.getKey().equals(name)) {
+                    a.getValue().add(animals);
+                }
+            }
+        }
+        return true;
+
+    }
+
+    public static void main(String[] args)
+            throws NegativeKgsException, MoreKmException, NegativeTypeException, MorePlaceException {
+
         var dog = new Dog(5, "Шарик", "Черный", 4);
         System.out.println(dog.getAge());
         System.out.println(dog.getName());
@@ -25,13 +63,9 @@ public class Zoo {
         dog.search();
         try {
             dog.eat(-1.5);
-        }
-
-        catch (NegativeKgsException me) {
+        } catch (NegativeKgsException me) {
             System.out.println(me.getMessage());
-        }
-
-        finally {
+        } finally {
             System.out.println("Ввести верное значение");
         }
 
@@ -40,6 +74,21 @@ public class Zoo {
         System.out.println();
 
         var cat = new Cat(6, "Мурзик", "Рыжий", 3);
+        System.out.println(cat.getAge());
+        System.out.println(cat.getName());
+        System.out.println(cat.getColor());
+        System.out.println(cat.getWeight());
+        cat.dirt();
+        cat.feel();
+        cat.doing();
+        cat.say();
+        cat.think();
+        cat.eat(0.5);
+        cat.eat("Вискас");
+
+        System.out.println();
+
+        var cat1 = new Cat(6, "Мурзик", "Рыжий", 3);
         System.out.println(cat.getAge());
         System.out.println(cat.getName());
         System.out.println(cat.getColor());
@@ -83,13 +132,9 @@ public class Zoo {
         parrot.eat("Морковь");
         try {
             parrot.fly(6);
-        }
-
-        catch (MoreKmException fl) {
+        } catch (MoreKmException fl) {
             System.out.println(fl.getMessage());
-        }
-
-        finally {
+        } finally {
             System.out.println("Ввести верное значение");
         }
 
@@ -107,13 +152,9 @@ public class Zoo {
         horse.say();
         try {
             horse.eat(-5);
-        }
-
-        catch (NegativeKgsException mee) {
+        } catch (NegativeKgsException mee) {
             System.out.println(mee.getMessage());
-        }
-
-        finally {
+        } finally {
             System.out.println("Ввести верное значение");
         }
 
@@ -148,6 +189,59 @@ public class Zoo {
         lion.say();
         lion.eat(25.6);
         lion.eat("Мясо");
+
+        System.out.println();
+
+        HashSet<Animal> aviary = new HashSet<>();
+        try {
+            fullAviary(dog, aviary);
+            fullAviary(cat, aviary);
+            fullAviary(cat1, aviary);
+            fullAviary(bear, aviary);
+            fullAviary(parrot, aviary);
+            fullAviary(horse, aviary);
+            fullAviary(monkey, aviary);
+            fullAviary(lion, aviary);
+        } catch (NegativeTypeException exception) {
+            System.out.println(exception.getMessage());
+
+        } catch (MoreAnimalException exception1) {
+            System.out.println(exception1.getMessage());
+        }
+        for (var animal : aviary) {
+            System.out.println(animal.getName());
+        }
+
+        System.out.println();
+
+        HashMap<String, HashSet<Animal>> aryMain = new HashMap<>();
+
+        HashSet<Animal> aviary1 = new HashSet<>();
+        HashSet<Animal> aviary2 = new HashSet<>();
+        HashSet<Animal> aviary3 = new HashSet<>();
+
+        aryMain.put("Первый вальер", aviary1);
+        aryMain.put("Второй вальер", aviary2);
+        aryMain.put("Третий вальер", aviary3);
+
+        try {
+            AddAviary(cat, aryMain, "Первый вальер");
+            AddAviary(dog, aryMain, "Третий вальер");
+            AddAviary(parrot, aryMain, "Второй вальер");
+            AddAviary(bear, aryMain, "Четвертый вальер");
+
+        } catch (MorePlaceException exception) {
+            System.out.println(exception.getMessage());
+        }
+
+        for (var a : aryMain.entrySet()) {
+            System.out.println(a.getKey());
+            for (Animal animal : a.getValue()) {
+                System.out.println(animal.getName());
+            }
+        }
+
+        System.out.println();
 
     }
 
