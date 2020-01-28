@@ -1,33 +1,80 @@
 package com.homework;
 
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class ThreadDetail {
 
     public static void main(String[] args) throws InterruptedException {
+        var count = new AtomicInteger(0);
 
-        var thread1 = new Thread(new DetailForThread1(1));
-        var thread2 = new Thread(new DetailForThread2(2));
-        var thread3 = new Thread(new DetailForThread3(3));
-        var thread4 = new Thread(new DetailForThread4(4));
-        var thread5 = new Thread(new DetailForThread5(5));
-        var thread6 = new Thread(new DetailForThread6(6));
+        for (int i = 0; i < 20; i++) {
+            int x = i;
 
-        thread1.start();
-        thread2.start();
+            var thread1 = new Thread() {
+                public void run() {
+                    System.out.println(x);
+                    count.getAndIncrement();
+                    System.out.println("Поток - 1");
+                }
+            };
 
-        thread1.join();
-        thread2.join();
+            var thread2 = new Thread() {
+                public void run() {
+                    System.out.println(x);
+                    count.getAndIncrement();
+                    System.out.println("Поток - 2");
+                }
+            };
 
-        thread3.start();
-        thread3.join();
+            var thread3 = new Thread() {
+                public void run() {
+                    System.out.println(x);
+                    count.getAndIncrement();
+                    System.out.println("Поток - 3");
+                }
+            };
 
-        thread4.start();
-        thread5.start();
+            var thread4 = new Thread() {
+                public void run() {
+                    System.out.println(x);
+                    count.getAndIncrement();
+                    System.out.println("Поток - 4");
+                }
+            };
 
-        thread4.join();
-        thread5.join();
+            var thread5 = new Thread() {
+                public void run() {
+                    System.out.println(x);
+                    count.getAndIncrement();
+                    System.out.println("Поток - 5");
+                }
+            };
 
-        thread6.start();
+            var thread6 = new Thread() {
+                public void run() {
+                    System.out.println(x);
+                    count.getAndIncrement();
+                    System.out.println("Поток - 6");
+                }
+            };
 
+            thread1.start();
+            thread2.start();
+
+            thread1.join();
+            thread2.join();
+
+            thread3.start();
+            thread3.join();
+
+            thread4.start();
+            thread5.start();
+
+            thread4.join();
+            thread5.join();
+
+            thread6.start();
+        }
     }
-
 }
