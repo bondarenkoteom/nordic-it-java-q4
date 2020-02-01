@@ -4,11 +4,11 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 public class MoveTask implements Runnable {
 
-    private LinkedBlockingDeque<Integer> queue1;
+    private LinkedBlockingDeque<Integer> queue;
     private LinkedBlockingDeque<Integer> result;
 
     public MoveTask(LinkedBlockingDeque<Integer> queue, LinkedBlockingDeque<Integer> result) {
-        this.queue1 = queue;
+        this.queue = queue;
         this.result = result;
     }
 
@@ -19,7 +19,7 @@ public class MoveTask implements Runnable {
     }
 
     public boolean moveElement() {
-        Integer elem = queue1.pollFirst();
+        Integer elem = queue.pollFirst();
 
         if (elem != null) {
             result.add(elem);
