@@ -11,7 +11,7 @@ public class ThreadApi {
         var queue = new LinkedBlockingDeque<Integer>();
         var result = new LinkedBlockingDeque<Integer>();
 
-        var executor = Executors.newFixedThreadPool(4);
+        var executor = Executors.newFixedThreadPool(5);
 
         for (var i = 1; i <= 2000; i++) {
             queue.add(i);
