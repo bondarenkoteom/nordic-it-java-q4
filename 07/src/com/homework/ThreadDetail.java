@@ -40,6 +40,7 @@ public class ThreadDetail {
                     System.out.println(x);
                     count.getAndIncrement();
                     System.out.println("Поток - 4");
+                    System.out.println(count.getAndIncrement());
                 }
             };
 
