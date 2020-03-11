@@ -1,4 +1,4 @@
-package com.example.OrderMax;
+package com.example.TestMax;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

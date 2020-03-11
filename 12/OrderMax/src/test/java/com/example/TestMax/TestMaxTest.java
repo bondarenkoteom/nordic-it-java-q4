@@ -1,9 +1,11 @@
-package com.example.OrderMax;
+package com.example.TestMax;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import com.example.TestMax.TestMaxApplication;
 
 public class TestMaxTest {
 

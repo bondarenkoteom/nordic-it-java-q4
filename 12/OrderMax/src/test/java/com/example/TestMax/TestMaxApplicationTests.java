@@ -1,4 +1,4 @@
-package com.example.OrderMax;
+package com.example.TestMax;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
