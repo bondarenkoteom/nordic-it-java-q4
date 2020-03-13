@@ -1,6 +1,5 @@
 package com.homework;
 
-import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ThreadDetail {
@@ -14,7 +13,6 @@ public class ThreadDetail {
             var thread1 = new Thread() {
                 public void run() {
                     System.out.println(x);
-                    count.getAndIncrement();
                     System.out.println("Поток - 1");
                 }
             };
@@ -22,7 +20,6 @@ public class ThreadDetail {
             var thread2 = new Thread() {
                 public void run() {
                     System.out.println(x);
-                    count.getAndIncrement();
                     System.out.println("Поток - 2");
                 }
             };
@@ -30,7 +27,6 @@ public class ThreadDetail {
             var thread3 = new Thread() {
                 public void run() {
                     System.out.println(x);
-                    count.getAndIncrement();
                     System.out.println("Поток - 3");
                 }
             };
@@ -38,7 +34,6 @@ public class ThreadDetail {
             var thread4 = new Thread() {
                 public void run() {
                     System.out.println(x);
-                    count.getAndIncrement();
                     System.out.println("Поток - 4");
                     System.out.println(count.getAndIncrement());
                 }
@@ -47,7 +42,6 @@ public class ThreadDetail {
             var thread5 = new Thread() {
                 public void run() {
                     System.out.println(x);
-                    count.getAndIncrement();
                     System.out.println("Поток - 5");
                 }
             };
@@ -55,7 +49,6 @@ public class ThreadDetail {
             var thread6 = new Thread() {
                 public void run() {
                     System.out.println(x);
-                    count.getAndIncrement();
                     System.out.println("Поток - 6");
                 }
             };
