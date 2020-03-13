@@ -23,7 +23,6 @@ public class Zoo {
             throws NegativeTypeException, MoreAnimalException {
         if (aviary.size() > 4) {
             throw new MoreAnimalException("Вальер полный");
-        } else {
         }
 
         if (aviary.add(animal) == false) {
@@ -38,9 +37,9 @@ public class Zoo {
         if (ary.containsKey(name) == false) {
             throw new MorePlaceException("Не этот вальер");
         } else {
-            for (var a : ary.entrySet()) {
-                if (a.getKey().equals(name)) {
-                    a.getValue().add(animals);
+            for (var avi : ary.entrySet()) {
+                if (avi.getKey().equals(name)) {
+                    avi.getValue().add(animals);
                 }
             }
         }

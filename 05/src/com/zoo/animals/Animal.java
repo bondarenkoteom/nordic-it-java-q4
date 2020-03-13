@@ -59,10 +59,12 @@ public abstract class Animal implements Doing, Speaking, Feeling {
     }
 
     public void eat(double kgs) throws NegativeKgsException {
-        if (kgs < 0)
+        if (kgs < 0) {
             throw new NegativeKgsException("Не может съесть отрицательное количество еды");
-        else
+        } else {
             System.out.println("Съем " + kgs + " килограммa еды");
+        }
+
     }
 
     public void eat(String title) {
@@ -71,10 +73,12 @@ public abstract class Animal implements Doing, Speaking, Feeling {
     }
 
     public void eat(int kgs) throws NegativeKgsException {
-        if (kgs < 0)
+        if (kgs < 0) {
             throw new NegativeKgsException("Не может съесть отрицательное количество еды");
-        else
+        } else {
             System.out.println("Съем " + kgs + " килограммa еды");
+        }
+
     }
 
     @Override
@@ -90,15 +94,23 @@ public abstract class Animal implements Doing, Speaking, Feeling {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+
+        if (getClass() != obj.getClass()) {
             return false;
+        }
+
         Animal other = (Animal) obj;
-        if (age != other.age)
+        if (age != other.age) {
             return false;
+        }
+
         if (color == null) {
             if (other.color != null)
                 return false;

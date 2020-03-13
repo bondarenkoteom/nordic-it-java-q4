@@ -40,10 +40,11 @@ public class Parrot extends Animal implements Flying {
 
     @Override
     public void fly(int km) throws MoreKmException {
-        if (km > 5)
+        if (km > 5) {
             throw new MoreKmException("Не может пролететь такое количесво киллометров");
-        else
+        } else {
             System.out.println("Хочу пролететь " + km + " киллометра");
+        }
 
     }
 
@@ -54,12 +55,18 @@ public class Parrot extends Animal implements Flying {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (!super.equals(obj))
+        }
+
+        if (!super.equals(obj)) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+
+        if (getClass() != obj.getClass()) {
             return false;
+        }
+
         return true;
     }
 
