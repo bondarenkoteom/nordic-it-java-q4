@@ -25,21 +25,21 @@ public class Zoo {
             throw new MoreAnimalException("Вальер полный");
         }
 
-        if (aviary.add(animal) == false) {
+        if (!aviary.add(animal)) {
             throw new NegativeTypeException("Одинаковые животные");
         }
         return animal;
 
     }
 
-    protected static Boolean AddAviary(Animal animals, HashMap<String, HashSet<Animal>> ary, String name)
+    protected static Boolean addAviary(Animal animals, HashMap<String, HashSet<Animal>> ary, String name)
             throws MorePlaceException {
-        if (ary.containsKey(name) == false) {
+        if (!ary.containsKey(name)) {
             throw new MorePlaceException("Не этот вальер");
         } else {
-            for (var avi : ary.entrySet()) {
-                if (avi.getKey().equals(name)) {
-                    avi.getValue().add(animals);
+            for (var a : ary.entrySet()) {
+                if (a.getKey().equals(name)) {
+                    a.getValue().add(animals);
                 }
             }
         }
@@ -48,7 +48,8 @@ public class Zoo {
     }
 
     public static void main(String[] args)
-            throws NegativeKgsException, MoreKmException, NegativeTypeException, MorePlaceException {
+            throws NegativeKgsException, MoreKmException, 
+            NegativeTypeException, MorePlaceException {
 
         var dog = new Dog(5, "Шарик", "Черный", 4);
         System.out.println(dog.getAge());
@@ -224,10 +225,10 @@ public class Zoo {
         aryMain.put("Третий вальер", aviary3);
 
         try {
-            AddAviary(cat, aryMain, "Первый вальер");
-            AddAviary(dog, aryMain, "Третий вальер");
-            AddAviary(parrot, aryMain, "Второй вальер");
-            AddAviary(bear, aryMain, "Четвертый вальер");
+            addAviary(cat, aryMain, "Первый вальер");
+            addAviary(dog, aryMain, "Третий вальер");
+            addAviary(parrot, aryMain, "Второй вальер");
+            addAviary(bear, aryMain, "Четвертый вальер");
 
         } catch (MorePlaceException exception) {
             System.out.println(exception.getMessage());
