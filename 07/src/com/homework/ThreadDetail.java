@@ -8,47 +8,47 @@ public class ThreadDetail {
         var count = new AtomicInteger(0);
 
         for (int i = 0; i < 20; i++) {
-            int x = i;
+            int elem = i;
 
             var thread1 = new Thread() {
                 public void run() {
-                    System.out.println(x);
+                    System.out.println(elem);
                     System.out.println("Поток - 1");
                 }
             };
 
             var thread2 = new Thread() {
                 public void run() {
-                    System.out.println(x);
+                    System.out.println(elem);
                     System.out.println("Поток - 2");
                 }
             };
 
-            var thread3 = new Thread() {
+            final var thread3 = new Thread() {
                 public void run() {
-                    System.out.println(x);
+                    System.out.println(elem);
                     System.out.println("Поток - 3");
                 }
             };
 
-            var thread4 = new Thread() {
+            final var thread4 = new Thread() {
                 public void run() {
-                    System.out.println(x);
+                    System.out.println(elem);
                     System.out.println("Поток - 4");
                     System.out.println(count.getAndIncrement());
                 }
             };
 
-            var thread5 = new Thread() {
+            final var thread5 = new Thread() {
                 public void run() {
-                    System.out.println(x);
+                    System.out.println(elem);
                     System.out.println("Поток - 5");
                 }
             };
 
-            var thread6 = new Thread() {
+            final var thread6 = new Thread() {
                 public void run() {
-                    System.out.println(x);
+                    System.out.println(elem);
                     System.out.println("Поток - 6");
                 }
             };
