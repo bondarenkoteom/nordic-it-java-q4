@@ -15,8 +15,13 @@ public class SumCallable implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         var sumFinal = 0;
-        for (int i = 0; i < sum.size(); i++) {
-            sumFinal = sumFinal + sum.poll();
+        for (var i = 0; i < sum.size(); i++) {
+            if (sum.isEmpty()) {
+                return sumFinal;
+            } else {
+                sumFinal = sumFinal + sum.poll();
+            }
+
         }
         return sumFinal;
     }

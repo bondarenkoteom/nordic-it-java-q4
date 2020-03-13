@@ -24,13 +24,13 @@ public class ThreadApplication {
         var count = 0;
         var randomListSumFuture = new ArrayList<Future<Integer>>();
         for (int i = 0; i < 4; i++) {
-            var ListSum = executor.submit(new SumCallable(sum));
-            randomListSumFuture.add(ListSum);
+            var listSum = executor.submit(new SumCallable(sum));
+            randomListSumFuture.add(listSum);
         }
 
-        for (var ListSum : randomListSumFuture) {
+        for (var listSum : randomListSumFuture) {
             try {
-                var countSum = ListSum.get();
+                var countSum = listSum.get();
                 System.out.println(countSum);
                 count += countSum;
             } catch (ExecutionException e) {
