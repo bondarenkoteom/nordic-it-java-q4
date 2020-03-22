@@ -88,21 +88,6 @@ public class Zoo {
 
         System.out.println();
 
-        var cat1 = new Cat(6, "Мурзик", "Рыжий", 3);
-        System.out.println(cat.getAge());
-        System.out.println(cat.getName());
-        System.out.println(cat.getColor());
-        System.out.println(cat.getWeight());
-        cat.dirt();
-        cat.feel();
-        cat.doing();
-        cat.say();
-        cat.think();
-        cat.eat(0.5);
-        cat.eat("Вискас");
-
-        System.out.println();
-
         var bear = new Bear(15, "Косолапый", "Бурый", 450);
         System.out.println(bear.getAge());
         System.out.println(bear.getName());
@@ -196,7 +181,6 @@ public class Zoo {
         try {
             fullAviary(dog, aviary);
             fullAviary(cat, aviary);
-            fullAviary(cat1, aviary);
             fullAviary(bear, aviary);
             fullAviary(parrot, aviary);
             fullAviary(horse, aviary);
