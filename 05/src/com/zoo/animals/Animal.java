@@ -112,17 +112,23 @@ public abstract class Animal implements Doing, Speaking, Feeling {
         }
 
         if (color == null) {
-            if (other.color != null)
+            if (other.color != null) {
                 return false;
+            }
+
         } else if (!color.equals(other.color))
             return false;
         if (name == null) {
-            if (other.name != null)
+            if (other.name != null) {
                 return false;
+            }
+
         } else if (!name.equals(other.name))
             return false;
-        if (weight != other.weight)
+        if (weight != other.weight) {
             return false;
+        }
+
         return true;
     }
 

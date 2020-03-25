@@ -48,8 +48,7 @@ public class Zoo {
     }
 
     public static void main(String[] args)
-            throws NegativeKgsException, MoreKmException, 
-            NegativeTypeException, MorePlaceException {
+            throws NegativeKgsException, MoreKmException, NegativeTypeException, MorePlaceException {
 
         var dog = new Dog(5, "Шарик", "Черный", 4);
         System.out.println(dog.getAge());
