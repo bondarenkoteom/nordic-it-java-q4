@@ -1,11 +1,8 @@
 package com.homework;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class ThreadDetail {
 
     public static void main(String[] args) throws InterruptedException {
-        var count = new AtomicInteger(0);
 
         for (int i = 0; i < 20; i++) {
             int elem = i;
@@ -35,7 +32,7 @@ public class ThreadDetail {
                 public void run() {
                     System.out.println(elem);
                     System.out.println("Поток - 4");
-                    System.out.println(count.getAndIncrement());
+
                 }
             };
 
