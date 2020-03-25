@@ -1,11 +1,11 @@
-package com.example.TestMax;
+package com.example.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.example.TestMax.TestMaxApplication;
+import com.example.test.max.TestMaxApplication;
 
 public class TestMaxTest {
 
