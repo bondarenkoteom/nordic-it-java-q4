@@ -6,11 +6,11 @@ public class Test {
 
     public static void main(String[] args) {
 
-        var sentence1 = new StringWords("Повторяю он оттуда не выйдет убежденно сказал прыщавый качая головой");
+        var sentence1 = new StringWords("РџРѕРІС‚РѕСЂСЏСЋ РѕРЅ РѕС‚С‚СѓРґР° РЅРµ РІС‹Р№РґРµС‚ СѓР±РµР¶РґРµРЅРЅРѕ СЃРєР°Р·Р°Р» РїСЂС‹С‰Р°РІС‹Р№ РєР°С‡Р°СЏ РіРѕР»РѕРІРѕР№");
         var sentence2 = new StringWords(
-                "Толстяк в желтой куртке переступил с ноги на ногу кашлянул снял с головы берет");
-        var sentence3 = new StringWords("Упитанная кобыла да и вьюки плотно набиты.");
-        var sentence4 = new StringWords("Молчите солтыс и не встревайте а то шишку заработаете");
+                "РўРѕР»СЃС‚СЏРє РІ Р¶РµР»С‚РѕР№ РєСѓСЂС‚РєРµ РїРµСЂРµСЃС‚СѓРїРёР» СЃ РЅРѕРіРё РЅР° РЅРѕРіСѓ РєР°С€Р»СЏРЅСѓР» СЃРЅСЏР» СЃ РіРѕР»РѕРІС‹ Р±РµСЂРµС‚");
+        var sentence3 = new StringWords("РЈРїРёС‚Р°РЅРЅР°СЏ РєРѕР±С‹Р»Р° РґР° Рё РІСЊСЋРєРё РїР»РѕС‚РЅРѕ РЅР°Р±РёС‚С‹.");
+        var sentence4 = new StringWords("РњРѕР»С‡РёС‚Рµ СЃРѕР»С‚С‹СЃ Рё РЅРµ РІСЃС‚СЂРµРІР°Р№С‚Рµ Р° С‚Рѕ С€РёС€РєСѓ Р·Р°СЂР°Р±РѕС‚Р°РµС‚Рµ");
         ArrayList<StringWords> sentMain = new ArrayList<StringWords>();
         sentMain.add(sentence1);
         sentMain.add(sentence2);
